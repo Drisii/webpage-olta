@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BakoShirts</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
             <img src="images/bako 4.png" width="125px">
         </div>
         <nav>
-            <ul>
+            <ul id="MenuItems">
                 <li><a href="">Home</a></li>
                 <li><a href="">Products</a></li>
                 <li><a href="">About</a></li>
@@ -26,6 +26,7 @@
             </ul>
         </nav>
         <img src="images/cart.png" width="30px" height="30px">
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" >
     </div>
     <div class="row">
         <div class="col-2">
@@ -85,6 +86,101 @@
             <p>5000 ALL</p>
         </div>
     </div>
+    <h2 class="title">Latest Products</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="images/bluze me dizenjo lule.jfif" >
+            <h4>Kemishe me Dizenjo me Lule</h4>
+            <p>5000 ALL</p>
+        </div>
+        <div class="col-4">
+            <img src="images/bluz dizenjo blu vija.jfif" >
+            <h4>Kemishe me Dizenjo me Vija Blu</h4>
+            <p>5000 ALL</p>
+        </div>
+        <div class="col-4">
+            <img src="images/bluu.jfif" >
+            <h4>Kemishe me Dizanjo Blu</h4>
+            <p>5000 ALL</p>
+        </div>
+        <div class="col-4">
+            <img src="images/bluz blu m.jfif" >
+            <h4>Kemishe Blu me Jake te Bardhe </h4>
+            <p>5000 ALL</p>
+        </div>
+    </div>
 </div>
+<!---offer-->
+<div class="offer">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/personalizo.jfif" class="offer-img">
+            </div>
+            <div class="col-2">
+                <p>Exclusively Abvailable on BakoShirts</p>
+                <h1>Kemishe e Personalizuar</h1>
+                <small>Personalizo kemishen tende,qepur sipas permasave te trupit dhe dizenjuar sipas deshires!!</small>
+            
+            </div>
+        </div>
+    </div>
+</div>
+<!---video tutorial-->
+<div class="video">
+    <video width="350" height="240" controls>
+        <source src="images/WhatsApp Video 2023-01-29 at 4.34.26 PM.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+      <p>Video Tutorial per Marrjen e Masave</p>
+     
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+           <div class="footer-col-1">
+            <img src="images/bako 4.png" >
+            <p>Matching style and class with luxury and comfort.</p>
+           </div>
+            <div class="footer-col-2">
+                <h3>Follow Us</h3>
+                <ul>
+                   <li>Facebook</li>
+                   <li>Instagram</li>
+</div>
+ <div class="footer-col-3">
+   <h3>Useful Links</h3>
+    <ul>
+        <li>Coupons</li>
+        <li>Blog Post</li>
+        <li>Return Policy</li>
+        <li>Join Affiliate</li>
+    </ul>
+ </div>
+ 
+  </div>
+  <hr>
+  <p class="copyright">Copyrigh 2023-BakoShirts</p>
+ </div>
+</div>
+<!---js for toggle menu-->
+<script>
+var MenuItems =document.getElementById("MenuItems");
+
+MenuItems.style.maxHeight = "0px";
+
+function menutoggle(){
+    if(MenuItems.style.maxHeight == "0px")
+{
+MenuItems.style.maxHeight  = "200px"
+}
+else
+{
+    MenuItems.style.maxHeight = "0px"}
+}
+
+</script>
 </body>
 </html>
