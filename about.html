@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   
+   <div class="container">
+    <div class="navbar">
+        <div class="logo">
+           <a href="index.html"><img src="images/bako 4.png" width="125px"></a> 
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+       <a href="cart.html"> <img src="images/cart.png" width="30px" height="30px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" >
+    </div>
+   
+    </div>  
+</div>
+    <div class="row">
+        <div class="col-2">
+            <h1>Ready To Wear <br> And Bespoke Shirt!</h1>
+            <p>Be exclusive, Be Devine, Be yourself.</p>
+       <a href=""class="btn">Explore Now &#8594;</a>
+        </div>
+       
+    </div>
+<div class="about">
+<p>
+    Ne jemi një kompani e themeluar në 1994 , me krenari pohojmë se jemi të parët që kemi prodhuar këmisha për tregun Shqiptar duke filluar me këmishat 
+   Ready-to- Wear( këmisha të gatshme) dhe kemi kaluar vite të tëra në ndërtimin e një teknologjie të dizajnuar për të realizuar përsosmërinë perfekte 
+   dhe për të prodhuar të parët në tregun tonë të famshmet Bespoke Shirts( këmisha me porosi).Kjo formulë është përsosur me po aq kohë, kujdes dhe energji
+   e cila është derdhur në përzgjedhjen e pëlhurave më të mira nga prodhuesit italianë me famë botërore dhe duke përdorur teknika rrobaqepësie të testuara në 
+   kohë për të përsosur zanatin tonë.Pse një këmishë me porosi?Ne e kuptojmë se veshja e një këmishë që ju përshtatet ashtu si ju pëlqen është një fillim i
+   shkëlqyeshëm për ditën tuaj. Në Bako Shirts, procesi i bërjes së këmishave fillon me një diskutim të plotë për zakonet , preferencat tuaja dhe  mbi të 
+   gjitha për guston tuaj në lidhje me stilin e këmishave tuaja.Më pas do të këshilloheni për pëlhurat, modelet dhe opsionet që do t'ju përshtaten më së miri
+   nevojave tuaja.Për të krijuar këmishat tuaja do t'ju prezantohet koleksioni më i gjerë dhe ekskluziv i pëlhurave italiane të këmishave në Shqipëri , gati 
+   2.000 zgjedhje në pëlhura të markave më të njohura italiane si Cerrutti,Ermenegildo Zegna, Corneliani, Canclini. Më pas ne do t'ju ndihmojmë të zgjidhni 
+   midis dhjetëra stileve të jakës dhe manshetës dhe opsioneve të ndryshme të përfundimit me stil që do t'i bëjnë këmishat tuaja me të vërtetë të veçanta.
+   Do të merren deri në 20 matje precize për të krijuar modelin tuaj në letër, e cila do të na lejojë të përsosim përshtatjen tuaj në detaje më të imtësishme
+   që mund të imagjinohen.Në këtë pikë, pasi modeli juaj i letrës është i ruajtur tashmë në skedarin tuaj personal,  Ajo që do të ju  kërkojmë është vetëm të 
+   zgjidhni pëlhurat dhe opsionet e detajimit. Ju mund të prisni një përshtatje të qëndrueshme dhe të përsosur çdo herë!
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+           <div class="footer-col-1">
+            <img src="images/bako 4.png" >
+            <p>Matching style and class with luxury and comfort.</p>
+           </div>
+            <div class="footer-col-2">
+                <h3>Follow Us</h3>
+                <ul>
+                   <li>Facebook</li>
+                   <li>Instagram</li>
+</div>
+ <div class="footer-col-3">
+   <h3>Useful Links</h3>
+    <ul>
+        <li>Coupons</li>
+        <li>Blog Post</li>
+        <li>Return Policy</li>
+        <li>Join Affiliate</li>
+    </ul>
+ </div>
+ 
+  </div>
+  <hr>
+  <p class="copyright">Copyrigh 2023-BakoShirts</p>
+ </div>
+</div>
+<!---js for toggle menu-->
+<script>
+    var MenuItems =document.getElementById("MenuItems");
+    
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+    {
+    MenuItems.style.maxHeight  = "200px"
+    }
+    else
+    {
+        MenuItems.style.maxHeight = "0px"}
+    }
+    
+    </script>
+    <!------js for toggle form-->
+<script>
+var LoginForm = document.getElementById("LoginForm");
+var RegForm = document.getElementById("RegForm");
+var Indicator = document.getElementById("Indicator");
+function register(){
+   
+    RegForm.style.transform = "translateX(0px)";
+     LoginForm.style.transform = "translateX(0px)";
+    Indicator.style.transform = "translateX(100px)";
+}
+function login(){
+   
+   RegForm.style.transform = "translateX(300px)";
+    LoginForm.style.transform = "translateX(300px)";
+  Indicator.style.transform = "translateX(0px)";
+}
+
+
+</script>
+</body>
+</html>
