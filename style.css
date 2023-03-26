@@ -399,11 +399,9 @@ form a {
 	transform: translateX(100px);
 	transition: transform 1s;
 }
-.about > p {
-	margin: 0 auto;
-	margin-left: 10%;
-	margin-right: 10%;
-	margin-bottom: 5%;
+
+.about {
+	margin: 5px 10% 5px 10%;
 }
 
 /*media query for less than 600 screen size*/
