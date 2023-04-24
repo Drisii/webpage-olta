@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+  <style>
+    /* Style the shopping cart */
+    #cart {
+      border: 1px solid black;
+      padding: 10px;
+      width: 200px;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #f0f0f0;
+    }
+    #cart h3 {
+      margin-top: 0;
+    }
+    #cart ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    #cart li {
+      margin-bottom: 5px;
+    }
+    #cart img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      vertical-align: middle;
+    
+    }
+    img {
+  width: 10%;
+  height: auto;
+}
+  </style>
+</head>
+<body>
+  <h1>Shopping Cart Demo</h1>
+
+  <div id="cart">
+    <h3>Shopping Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: ALL<span id="cart-total">0</span></p>
+  </div>
+
+  <h2>Items</h2>
+  <ul id="item-list">
+    <li>
+      <img src="images/bluu.jfif" alt=" 1">
+      <h3>Kemishe-Blu-Me-Vija</h3>
+      <p>7000-ALL</p>
+      <button class="add-to-cart" data-id="1">Add to Cart</button>
+    </li>
+    <li>
+      <img src="images/bluz blu m.jfif" alt=" 2">
+      <h3>Kemishe-e-Bardhe</h3>
+      <p>7000-ALL</p>
+      <button class="add-to-cart" data-id="2">Add to Cart</button>
+    </li>
+    <li>
+      <img src="images/linen.jpg" alt=" 3">
+      <h3>Kemishe-Me-Dizanjo</h3>
+      <p>7000-ALL</p>
+      <button class="add-to-cart" data-id="3">Add to Cart</button>
+    </li>
+  </ul>
+
+  <script>
+    // Define the shopping items
+    var items = [
+      {
+        id: "1",
+        name: "Kemishe-Blu-Me-Vija",
+        price: 7000,
+        image: "bluu.jfif"
+      },
+      {
+        id: "2",
+        name: "Kemishe-e-Bardhe",
+        price: 7000,
+        image: "bluz blu m.jfif"
+      },
+      {
+        id: "3",
+        name: "Kemishe-Me-Dizanjo",
+        price: 7000,
+        image: "linen.jpg"
+      }
+    ];
+
+    // Initialize the shopping cart
+    var cartItems = [];
+
+    // Add event listeners to the "Add to Cart" buttons
+var addToCartButtons = document.querySelectorAll(".add-to-cart");
+for (var i = 0; i < addToCartButtons.length; i++) {
+  var button = addToCartButtons[i];
+  button.addEventListener("click", function(event) {
+    console.log("Add to Cart button clicked");
+    var itemId = event.target.dataset.id;
+    console.log("Item ID: " + itemId);
+    addItemToCart(itemId);
+    renderCart();
+  });
+}
+
+   // Render the shopping cart
+   function renderCart() {
+  var cartItemsList = document.querySelector("#cart-items");
+  var cartTotal = document.querySelector("#cart-total");
+  var cartTotalValue = 0;
+  
+  // Clear the cart items list
+  cartItemsList.innerHTML = "";
+
+  // Render each item in the cart
+  for (var i = 0; i < cartItems.length; i++) {
+    var item = cartItems[i];
+    var listItem = document.createElement("li");
+    var itemImage = document.createElement("img");
+    itemImage.src = item.image;
+    var itemName = document.createElement("h4");
+    itemName.textContent = item.name;
+    var itemPrice = document.createElement("p");
+    itemPrice.textContent = item.price + "-ALL";
+    var removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.setAttribute("data-id", item.id);
+    removeButton.addEventListener("click", function(event) {
+      var itemId = event.target.dataset.id;
+      removeItemFromCart(itemId);
+      renderCart();
+    });
+
+    listItem.appendChild(itemImage);
+    listItem.appendChild(itemName);
+    listItem.appendChild(itemPrice);
+    listItem.appendChild(removeButton);
+
+    cartItemsList.appendChild(listItem);
+
+    // Add item price to the total cart value
+    cartTotalValue += item.price;
+  }
+
+  // Update the cart total value
+  cartTotal.textContent = cartTotalValue + "-ALL";
+}
+
+
+// Remove an item from the cart
+function removeItemFromCart(itemId) {
+  cartItems = cartItems.filter(function(item) {
+    return item.id !== itemId;
+  });
+}
+
+// Render the initial shopping cart
+renderCart();
+
+</script>
+</body>
+</html>

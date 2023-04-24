@@ -11,7 +11,7 @@
 </head>
 <body>
    
-   <div class="container">
+ <div class="container">
     <div class="navbar">
         <div class="logo">
             <a href="index.html"><img src="images/bako 4.png" width="125px"></a>
@@ -32,72 +32,10 @@
     </div>  
 
 </div>
-<!---cart item details-->
-<div class="small-contanier cart-page">
-<table>
-    <tr>
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Subtotal</th>
-    </tr>
-    <tr>
-        <td>
-            <div class="cart-info">
-                <img src="images/oversized shirt.jpg" >
-                <div>
-                    <p>Oversized shirt</p>
-                    <small>Price:6000 ALL</small>
-                    <br>
-                    <a href="">Remove</a>
-                </div>
-            </div>
-        </td>
-        <td><input type="number" value="1"></td>
-        <td>6000 ALL</td>
-    </tr>
-    <tr>
-        <td>
-            <div class="cart-info">
-                <img src="images/bluz dizenjo blu vija.jfif" >
-                <div>
-                    <p>Kemishe me Dizenjo Blu me Vija</p>
-                    <small>Price:6000 ALL</small>
-                    <br>
-                    <a href="">Remove</a>
-                </div>
-            </div>
-        </td>
-        <td><input type="number" value="1"></td>
-        <td>6000 ALL</td>
-    </tr>
-    <tr>
-        <td>
-            <div class="cart-info">
-                <img src="images/bluze me dizenjo lule.jfif" >
-                <div>
-                    <p>Kemishe me Dizenjo me Lule</p>
-                    <small>Price:6000 ALL</small>
-                    <br>
-                    <a href="">Remove</a>
-                </div>
-            </div>
-        </td>
-        <td><input type="number" value="1"></td>
-        <td>6000 ALL</td>
-    </tr>
-</table>
-<div class="total-price">
-    <table>
-        <tr>
-            <td>Total</td>
-            <td>18000 ALL</td>
-        </tr>
-      
-      
-    </table>
-</div>
-</div>
-     
+<div id="root"></div>
+<script src="jssforcart.js"></script>
+<div id="total">ALL 0.00</div>
+
 
 <!--footer-->
 <div class="footer">
@@ -128,6 +66,8 @@
   <p class="copyright">Copyright 2023-BakoShirts</p>
  </div>
 </div>
+
+
 <!---js for toggle menu-->
 <script>
     var MenuItems =document.getElementById("MenuItems");

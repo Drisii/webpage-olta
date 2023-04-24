@@ -404,6 +404,7 @@ form a {
 	margin: 5px 10% 5px 10%;
 }
 
+
 /*media query for less than 600 screen size*/
 @media only screen and (max-width: 600px) {
 	.row {
